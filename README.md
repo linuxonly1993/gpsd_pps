@@ -13,7 +13,11 @@
 1. [Buy Garmin 18x LVC GPS on Amazon.com (US)](https://www.amazon.com/gp/product/B0016O3T7A) - not required if you are using / buying the GlobalSat MR-350P-S4
 
 ## GlobalSat MR-350PS4 PS/2 pin-out
-![Image of PS/2 Plug](https://freeshell.de/~luis/model-m/jszybowski/PS2connector.jpg)
+![Image of PS/2 Plug](GlobalSat_MR350P-S4-PS2-Pinout.png)
+
+The diagram above is from [GlobalSat MR-350PS4 Technical Specifications](https://www.gpscity.com/pdfs/manuals/MR350PS4-EN-MANUAL.pdf)
+
+Note that this is **NOT** the standard PS/2 pin-out.
 
 Pin | Function
 --- | --------
