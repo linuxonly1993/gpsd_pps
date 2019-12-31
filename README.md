@@ -58,12 +58,15 @@ Notes:
 
 Note that you MUST buy the LVC version, and not the USB version(s).
 
-Comparison with the GlobalSat MR-250P-S4:
-- The Garmin 18x LVC seems to be considerably more expensive
-- The Garmin 18x LVC is reviewed to **NOT** work indoors, while the GlobalSat MR-250P-S4 is reviewed to work indoors in wood buildings - see [GPSD Compatible Hardware](https://gpsd.gitlab.io/gpsd/hardware.html)
-- GlobalSat MR-250P-S4 is reviewed to have higher PPS accuracy than the Garmin 18x LVC
-- If you are using the Garmin 18x LVC, you do not need the PS/2 Male-Female cable
-- The Garmin comes in a casing flat at the botton with a magnetic base that is convenient to attach the GPS to the top of your server rack
+### Comparison with the GlobalSat MR-250P-S4:
+
+Garmin 18x LVC | GlobalSat MR-250P-S4
+-------------- | --------------------
+More expensive | Less expensive
+Reviews say it will not work indoors (10 | Reviews say it works indoors in wood buildings (1)
+1 microsecond PPS accuracy - worse (1) | 50 ns PPS accuracy - better (1)
+Do not need PS/2 Male-Female cable | Recommend PS/2 Male-Female cable
+Casing is flat at the botton with a magnetic base | No magnetic base, more clumsy to mount
 
 ![Garmin 18x LVC pin-out and wiring diagram](Garmin_18x_LVC_Wiring_Diagram.png)
 
