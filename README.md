@@ -72,6 +72,9 @@ Reviews say it will not work indoors (1) | Reviews say it works indoors in wood 
 Do not need PS/2 Male-Female cable | Recommend PS/2 Male-Female cable
 Casing is flat at the botton with a magnetic base | No magnetic base, more clumsy to mount
 
+(1): [GPSD Compatible Hardware](https://gpsd.gitlab.io/gpsd/hardware.html)
+
+
 ![Garmin 18x LVC pin-out and wiring diagram](Garmin_18x_LVC_Wiring_Diagram.png)
 
 The diagram above is from [Garmin 18x Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
