@@ -235,6 +235,7 @@ Leap status     : Normal
 1. [RS232 Serial Cable Wiring](https://ltxfaq.custhelp.com/app/answers/detail/a_id/25/~/rs232-serial-cable-wiring)
 1. [Crossover or "Null Modem" vs. Straight Through Serial Cable](https://www.decisivetactics.com/support/view?article=crossover-or-null-modem-vs-straight-through-serial-cable)
 1. [Garmin 18x Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
+1. [The Raspberry Pi as a Stratum-1 NTP Server](https://www.satsignal.eu/ntp/Raspberry-Pi-NTP.html) - Uses a Raspberry Pi "hat" module, but otherwise contains a wealth of information
 
 ## Contents of files
 ### File list
