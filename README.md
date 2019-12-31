@@ -206,7 +206,6 @@ Leap status     : Normal
 │   └── systemd
 │       └── system
 │           └── pps_ldisc.service
-├── setup.txt
 └── var
     └── lib
         └── setserial
