@@ -76,6 +76,8 @@ Casing is flat at the botton with a magnetic base | No magnetic base, more clums
 
 The diagram above is from [Garmin 18x Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
 
+Note: the diagram above does not show PIN 1 (Yellow) (PPS) wire connected anywhere, but it **SHOULD** be connected to DB9 Pin 1 (DCD). Without that PPS will **NOT** work !
+
 Garmin 18x LVC PIN (Color)| Function | DB9 PIN | USB cable wire
 ------------------- | -------- | ------- | --------------
 1 (Yellow) | PPS | 1 | -
