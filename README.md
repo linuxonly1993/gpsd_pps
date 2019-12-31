@@ -101,13 +101,6 @@ If this is not the case substitute ```/dev/ttyABC``` for ```/dev/ttyS1``` in fol
 
 **Do this before proceeding further**
 
-## Configure serial port
-- Strictly **NOT REQUIRED** just for testing PPS with gpsd. All setserial is used for is setting the serial port into **low_latency** mode - may improve PPS latency / accuracy
-- Make sure you have modified ```var/lib/setserial/autoserial.conf``` to reflect serial port being used (if modification is required)
-- Run ```dpkg-reconfigure setserial``` and set configuration mode to **MANUAL**
-- Copy ```/lib/setserial/autoserial.conf``` to /var/lib/setserial/autoserial.conf
-- ```for op in stop start; do systemctl $op setserial.service; done```
-
 ## Configure GPSD
 - Make sure you have modified ```etc/default/gpsd``` to reflect serial port being used (if modification is required)
 - Copy ```etc/default/gpsd``` to ```c/default/gpsd```
@@ -128,6 +121,13 @@ CONFIG_PPS_CLIENT_LDISC=m
     - ```modprobe pps_ldisc``` before starting gpsd or restart gpsd after the modprobe
     - Do this after every reboot
     - Without module pps_ldisc, PPS capabilities will not be available
+
+## Configure serial port
+- Strictly **NOT REQUIRED** just for testing PPS with gpsd. All setserial is used for is setting the serial port into **low_latency** mode - may improve PPS latency / accuracy
+- Make sure you have modified ```var/lib/setserial/autoserial.conf``` to reflect serial port being used (if modification is required)
+- Run ```dpkg-reconfigure setserial``` and set configuration mode to **MANUAL**
+- Copy ```/lib/setserial/autoserial.conf``` to /var/lib/setserial/autoserial.conf
+- ```for op in stop start; do systemctl $op setserial.service; done```
 
 ### Disable systemd-timesyncd.service
 - systemd-timesyncd.service conflicts with chrony and if systemd-timesyncd.service is enabled, chrony will not autostart
