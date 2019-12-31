@@ -22,6 +22,19 @@ If this is not the case substitute ```/dev/ttyABC``` for ```/dev/ttyS1``` in fol
 
 **Do this before proceeding further**
 
+## GlobalSat MR-350PS4 PS/2 pin-out
+![Image of PS/2 Plug](https://freeshell.de/~luis/model-m/jszybowski/PS2connector.jpg)
+
+Pin | Function
+--- | --------
+1 | GND
+2 | VCC
+3 | PPS
+4 | RX
+5 | TX
+6 | NC
+
+
 ## Configure serial port
 - Make sure you have modified ```var/lib/setserial/autoserial.conf``` to reflect serial port being used (if modification is required)
 - Run ```dpkg-reconfigure setserial``` and set configuration mode to **MANUAL**
