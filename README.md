@@ -48,7 +48,7 @@ Pin | Function | Direction
 ## DB9 D-SUB RS232 Adapter (Female with Screw) screw pins
 ![Image of DB9 D-SUB RS232 Adapter (Female with Screw)](DB9_Female_Screw_Diagram.png)
 
-**Check the pin numbering at the screw terminals - may be different from this diagram !**
+**Check the pin numbering at the screw terminals - may be different from this image !**
 
 MR-350P-S4 PS/2 PIN | Function | DB9 PIN | USB cable wire
 ------------------- | -------- | ------- | --------------
