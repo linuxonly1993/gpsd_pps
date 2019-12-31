@@ -47,7 +47,18 @@ Pin | Function | Direction
 
 ## DB9 D-SUB RS232 Adapter (Female with Screw) screw pins
 ![Image of DB9 D-SUB RS232 Adapter (Female with Screw)](DB9_Female_Screw_Diagram.png)
+
 **Check the pin numbering at the screw terminals - may be different from this diagram !**
+
+MR-350P-S4 PS/2 PIN | Function | DB9 PIN | USB cable wire
+------------------- | -------- | ------- | --------------
+1 | GND | 5 | Black
+2 | VCC | - | Red
+3 | PPS | 1 | -
+4 | RX | 2 | -
+5 | TX | 3 | -
+6 | NC | - | -
+
 
 ## Configure serial port
 - Make sure you have modified ```var/lib/setserial/autoserial.conf``` to reflect serial port being used (if modification is required)
