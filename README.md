@@ -49,6 +49,17 @@ CONFIG_PPS_CLIENT_LDISC=m
 - Disable systemd-timesyncd.service - **conflicts with chrony autostart !**
     - ```for op in stop disable mask; do systemctl $op systemd-timesyncd.service ; done```
 
+## Testing
+### Testing PPS capabilities
+```ppswatch /dev/pps0```
+### Testing GPS NMEA
+1. ```cgps```
+1. ```gpsmon```
+### Showing chrony status
+```
+chronyc -m 'sources -v' tracking 'sourcestats -v'
+```
+
 ## Contents of files
 ### File list
 ```
