@@ -67,7 +67,7 @@ Note that you MUST buy the LVC version, and not the USB version(s).
 Garmin 18x LVC | GlobalSat MR-250P-S4
 -------------- | --------------------
 More expensive | Less expensive
-Reviews say it will not work indoors (10 | Reviews say it works indoors in wood buildings (1)
+Reviews say it will not work indoors (1) | Reviews say it works indoors in wood buildings (1)
 1 microsecond PPS accuracy - worse (1) | 50 ns PPS accuracy - better (1)
 Do not need PS/2 Male-Female cable | Recommend PS/2 Male-Female cable
 Casing is flat at the botton with a magnetic base | No magnetic base, more clumsy to mount
