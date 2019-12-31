@@ -63,6 +63,7 @@ Comparison with the GlobalSat MR-250P-S4:
 - The Garmin 18x LVC is reviewed to **NOT** work indoors, while the GlobalSat MR-250P-S4 is reviewed to work indoors in wood buildings - see [GPSD Compatible Hardware](https://gpsd.gitlab.io/gpsd/hardware.html)
 - GlobalSat MR-250P-S4 is reviewed to have higher PPS accuracy than the Garmin 18x LVC
 - If you are using the Garmin 18x LVC, you do not need the PS/2 Male-Female cable
+- The Garmin comes in a casing flat at the botton with a magnetic base that is convenient to attach the GPS to the top of your server rack
 
 ![Garmin 18x LVC pin-out and wiring diagram](Garmin_18x_LVC_Wiring_Diagram.png)
 
@@ -119,6 +120,7 @@ CONFIG_PPS_CLIENT_LDISC=m
 ### Enable loading of pps_ldisc modules on boot
 - Copy ```etc/systemd/system/pps_ldisc.service``` to ```/etc/systemd/system```
 - Run ```systemctl enable pps_ldisc.service```
+- Run ```systemctl start pps_ldisc.service```
 - Technically this is not **REQUIRED** just to test GPSD, but if not using this service you need to do the following:
     - ```modprobe pps_ldisc``` before starting gpsd or restart gpsd after the modprobe
     - Do this after every reboot
