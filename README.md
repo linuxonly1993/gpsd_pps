@@ -53,6 +53,29 @@ Notes:
 - PS/2 Pin 2 (VCC) goes ONLY to USB cable
 - PS/2 Pin 1 (GND) goes to DB9 Pin 5 **AND** to USB cable
 
+## NTP time with GPSD and PPS-enabled GPS Garmin 18x LVC GPS
+**NOTE: I have not personally tried the Garmin 18x LVC. I am only including this section in the hope that the wiring tips may help others who have or buy the Garmin 18x LVC**
+
+Note that you MUST buy the LVC version, and not the USB version(s).
+
+Comparison with the GlobalSat MR-250P-S4:
+- The Garmin 18x LVC seems to be considerably more expensive
+- The Garmin 18x LVC is reviewed to **NOT** work indoors, while the GlobalSat MR-250P-S4 is reviewed to work indoors in wood buildings - see [GPSD Compatible Hardware](https://gpsd.gitlab.io/gpsd/hardware.html)
+- If you are using the Garmin 18x LVC, you do not need the PS/2 Male-Female cable
+
+![Garmin 18x LVC pin-out and wiring diagram](Garmin_18x_LVC_Wiring_Diagram.png)
+
+The diagram above is from [Garmin 18x Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
+
+Garmin 18x LVC PIN (Color)| Function | DB9 PIN | USB cable wire
+------------------- | -------- | ------- | --------------
+1 (Yellow) | PPS | 1 | -
+2 (Red) | VCC | - | Red
+3 (Black) | GND | 5 | Black
+4 (White) | TX | 3 | -
+5 (Black) | GND | - | -
+6 (Green) | RX | 2 | -
+
 ## Package installation
 ```apt install gpsd chrony setserial gpsd-clients pps-tools```
 ## Package versions
@@ -185,28 +208,6 @@ Root dispersion : 0.000021925 seconds
 Update interval : 16.0 seconds
 Leap status     : Normal
 ```
-## NTP time with GPSD and PPS-enabled GPS Garmin 18x LVC GPS
-**NOTE: I have not personally tried the Garmin 18x LVC. I am only including this section in the hope that the wiring tips may help others who have or buy the Garmin 18x LVC**
-
-Note that you MUST buy the LVC version, and not the USB version(s).
-
-Comparison with the GlobalSat MR-250P-S4:
-- The Garmin 18x LVC seems to be considerably more expensive
-- The Garmin 18x LVC is reviewed to **NOT** work indoors, while the GlobalSat MR-250P-S4 is reviewed to work indoors in wood buildings - see [GPSD Compatible Hardware](https://gpsd.gitlab.io/gpsd/hardware.html)
-
-![Garmin 18x LVC pin-out and wiring diagram](Garmin_18x_LVC_Wiring_Diagram.png)
-
-The diagram above is from [Garmin 18x Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
-
-Garmin 18x LVC PIN (Color)| Function | DB9 PIN | USB cable wire
-------------------- | -------- | ------- | --------------
-1 (Yellow) | PPS | 1 | -
-2 (Red) | VCC | - | Red
-3 (Black) | GND | 5 | Black
-4 (White) | TX | 3 | -
-5 (Black) | GND | - | -
-6 (Green) | RX | 2 | -
-
 ## Links
 1. [GPSD Time Service HOWTO by author of GPSD](https://gpsd.gitlab.io/gpsd/gpsd-time-service-howto.html)
 1.  [GPSD Compatible Hardware](https://gpsd.gitlab.io/gpsd/hardware.html)
