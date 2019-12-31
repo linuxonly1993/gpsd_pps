@@ -46,7 +46,7 @@ Pin | Function | Direction
 5 | GND | -
 
 ## DB9 D-SUB RS232 Adapter (Female with Screw) screw pins
-![Image of DB9 D-SUB RS232 Adapter (Female with Screw)](https://images-na.ssl-images-amazon.com/images/I/611xEvFrc8L._AC_SL1065_.jpg)
+![Image of DB9 D-SUB RS232 Adapter (Female with Screw)](DB9_Female_Screw_Diagram.png)
 **Check the pin numbering at the screw terminals - may be different from this diagram !**
 
 ## Configure serial port
