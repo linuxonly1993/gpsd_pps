@@ -407,3 +407,24 @@ hwclockfile /etc/adjtime
 
 rtcsync
 ```
+# NTP time with GPSD and PPS-enabled GPS Garmin 18x LVC GPS
+Note that you MUST buy the LVC version, and not the USB version(s).
+
+Comparison with the GlobalSat MR-250P-S4:
+- The Garmin 18x LVC seems to be considerably more expensive
+- The Garmin 18x LVC is reviewed to **NOT** work indoors, while the GlobalSat MR-250P-S4 is reviewed to work indoors in wood buildings - see [GPSD Compatible Hardware](https://gpsd.gitlab.io/gpsd/hardware.html)
+
+**NOTE: I have not personally tried the Garmin 18x LVC. I am only including this section in the hope that the wiring tips may help others who have or buy the Garmin 18x LVC**
+
+[Garmin 18x LVC pin-out and wiring diagram](Garmin_18x_LVC_Wiring_Diagram.png)
+
+The diagram above is from [Garmin 18x (Not used) Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
+
+Garmin 18x LVC PIN (Color)| Function | DB9 PIN | USB cable wire
+------------------- | -------- | ------- | --------------
+1 | PPS (Yellow) | 1 | -
+2 | VCC (Red) | - | Red
+3 | GND (Black) | 5 | Black
+4 | TX (White) | 3 | -
+5 | GND (Black) | - | -
+6 | RX (Green) | 2 | -
