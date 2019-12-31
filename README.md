@@ -45,6 +45,9 @@ Pin | Function | Direction
 4 | DTR | To GPS from computer (unused here)
 5 | GND | -
 
+## DB9 D-SUB RS232 Adapter (Female with Screw) screw pins
+![Image of DB9 D-SUB RS232 Adapter (Female with Screw)](https://images-na.ssl-images-amazon.com/images/I/611xEvFrc8L._AC_SL1065_.jpg)
+**Check the pin numbering at the screw terminals - may be different from this diagram !**
 
 ## Configure serial port
 - Make sure you have modified ```var/lib/setserial/autoserial.conf``` to reflect serial port being used (if modification is required)
