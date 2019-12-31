@@ -197,7 +197,7 @@ Leap status     : Normal
 1. [GlobalSat MR-350PS4 Technical Specifications](https://www.gpscity.com/pdfs/manuals/MR350PS4-EN-MANUAL.pdf)
 1. [RS232 Serial Cable Wiring](https://ltxfaq.custhelp.com/app/answers/detail/a_id/25/~/rs232-serial-cable-wiring)
 1. [Crossover or "Null Modem" vs. Straight Through Serial Cable](https://www.decisivetactics.com/support/view?article=crossover-or-null-modem-vs-straight-through-serial-cable)
-1. [Garmin 18x (Not used) Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
+1. [Garmin 18x Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
 
 ## Contents of files
 ### File list
@@ -418,7 +418,7 @@ Comparison with the GlobalSat MR-250P-S4:
 
 ![Garmin 18x LVC pin-out and wiring diagram](Garmin_18x_LVC_Wiring_Diagram.png)
 
-The diagram above is from [Garmin 18x (Not used) Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
+The diagram above is from [Garmin 18x Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
 
 Garmin 18x LVC PIN (Color)| Function | DB9 PIN | USB cable wire
 ------------------- | -------- | ------- | --------------
