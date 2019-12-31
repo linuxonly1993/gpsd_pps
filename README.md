@@ -98,6 +98,16 @@ CONFIG_PPS_CLIENT_LDISC=m
 - copy ```etc/chrony/chrony.conf``` to ```etc/chrony/```
 
 ## Testing
+### Stop gpsd (systemd variant)
+```systemctl stop gpsd.socket gpsd.service```
+
+### Restart gpsd (systemd variant)
+```for op in stop start; do systemctl $op gpsd.socket gpsd.service```
+
+### Run gpsd in foreground for testing
+- [Stop gpsd]()
+- ```gpsd -b -n -N -D3 /dev/ttyS1 /dev/pps0``` (**IMPORTANT**: replace ``/dev/ttyS1``` with path to serial port you are using)
+
 ### Testing PPS capabilities
 ```ppswatch /dev/pps0```
 ### Testing GPS NMEA
