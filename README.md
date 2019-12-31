@@ -416,7 +416,7 @@ Comparison with the GlobalSat MR-250P-S4:
 
 **NOTE: I have not personally tried the Garmin 18x LVC. I am only including this section in the hope that the wiring tips may help others who have or buy the Garmin 18x LVC**
 
-[Garmin 18x LVC pin-out and wiring diagram](Garmin_18x_LVC_Wiring_Diagram.png)
+![Garmin 18x LVC pin-out and wiring diagram](Garmin_18x_LVC_Wiring_Diagram.png)
 
 The diagram above is from [Garmin 18x (Not used) Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
 
