@@ -292,6 +292,10 @@ WantedBy=gpsd.service
 ```
 
 ### etc/chrony/chrony.conf
+The extra ```server``` lines in chrony.conf are totally irrelevant to using PPS
+
+For PPS, only the line reading ```refclock SHM 1 offset 0 delay 0.001 refid PPS``` is important.
+
 ```
 # This the default chrony.conf file for the Debian chrony package.  After
 # editing this file use the command 'invoke-rc.d chrony restart' to make
