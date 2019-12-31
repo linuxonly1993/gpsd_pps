@@ -3,6 +3,15 @@
 - Ubuntu Bionic 18.04.3
 - Linux kernel 5.4.3 (Vanilla kernel from kernel.org - no patches requried or used)
 
+## Things you may need to buy
+1. [Buy GlobalSat MR-350P-S4 on Amazon.com (US)](https://www.amazon.com/GlobalSat-Serial-Receiver-Mount-MR-350P-S4/dp/B00I3IQ780)
+1. [Buy DB9 D-SUB RS232 Adapter (Female with Screw) on Amazon.com (US)](https://www.amazon.com/gp/product/B01C2WDU78)
+1. [Buy PS/2 Mini-DIN Male-to-Female cable on Amazon.com (US)](https://www.amazon.com/gp/product/B007TZCTEE)
+1. [Amazon search for DB9 D-SUB RS232 Adapter (Female with Screw)](https://www.amazon.com/s?k=DB9+D-SUB+RS232+Adapter+%28Female+with+Screw%29&i=electronics&ref=nb_sb_noss)
+1. [Amazon search for PS/2 Mini-DIN Male-to-Female cable](https://www.amazon.com/s?k=PS%2F2+Mini-DIN+Male-to-Female+cable&i=electronics&ref=nb_sb_noss)
+1. [Amazon search for GlobalSat MR-350P-S4](https://www.amazon.com/s?k=GlobalSat+MR-350P-S4&i=electronics&ref=nb_sb_noss)
+1. [Buy Garmin 18x LVC GPS on Amazon.com (US)](https://www.amazon.com/gp/product/B0016O3T7A) - not required if you are using / buying the GlobalSat MR-350P-S4
+
 ## GlobalSat MR-350PS4 PS/2 pin-out
 ![Image of PS/2 Plug](https://freeshell.de/~luis/model-m/jszybowski/PS2connector.jpg)
 
@@ -65,6 +74,7 @@ If this is not the case substitute ```/dev/ttyABC``` for ```/dev/ttyS1``` in fol
 **Do this before proceeding further**
 
 ## Configure serial port
+- Strictly **NOT REQUIRED** just for testing PPS with gpsd. All setserial is used for is setting the serial port into **low_latency** mode - may improve PPS latency / accuracy
 - Make sure you have modified ```var/lib/setserial/autoserial.conf``` to reflect serial port being used (if modification is required)
 - Run ```dpkg-reconfigure setserial``` and set configuration mode to **MANUAL**
 - Copy ```/lib/setserial/autoserial.conf``` to /var/lib/setserial/autoserial.conf
@@ -188,11 +198,6 @@ Leap status     : Normal
 1. [RS232 Serial Cable Wiring](https://ltxfaq.custhelp.com/app/answers/detail/a_id/25/~/rs232-serial-cable-wiring)
 1. [Crossover or "Null Modem" vs. Straight Through Serial Cable](https://www.decisivetactics.com/support/view?article=crossover-or-null-modem-vs-straight-through-serial-cable)
 1. [Garmin 18x (Not used) Technical Specifications](https://static.garmincdn.com/pumac/GPS_18x_Tech_Specs.pdf)
-
-## Buying Links
-1. [Buy GlobalSat MR-350P-S4 on Amazon.com (US)](https://www.amazon.com/GlobalSat-Serial-Receiver-Mount-MR-350P-S4/dp/B00I3IQ780)
-1. [Buy DB9 D-SUB RS232 Adapter (Female with Screw) on Amazon.com (US)](https://www.amazon.com/gp/product/B01C2WDU78)
-1. [Buy Garmin 18x LVC GPS on Amazon.com (US)](https://www.amazon.com/gp/product/B0016O3T7A)
 
 ## Contents of files
 ### File list
