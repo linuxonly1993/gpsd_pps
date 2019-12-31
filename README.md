@@ -2,6 +2,7 @@
 ## Operating environment
 - Ubuntu Bionic 18.04.3
 - Linux kernel 5.4.3 (Vanilla kernel from kernel.org - no patches requried or used)
+
 ## GlobalSat MR-350PS4 PS/2 pin-out
 ![Image of PS/2 Plug](https://freeshell.de/~luis/model-m/jszybowski/PS2connector.jpg)
 
@@ -84,11 +85,17 @@ CONFIG_PPS_CLIENT_LDISC=m
 ### Enable loading of pps_ldisc modules on boot
 - Copy ```etc/systemd/system/pps_ldisc.service``` to ```/etc/systemd/system```
 - Run ```systemctl enable pps_ldisc.service```
+- Technically this is not **REQUIRED** just to test GPSD, but if not using this service you need to do the following:
+    - ```modprobe pps_ldisc``` before starting gpsd or restart gpsd after the modprobe
+    - Do this after every reboot
+    - Without module pps_ldisc, PPS capabilities will not be available
+
+### Disable systemd-timesyncd.service
+- systemd-timesyncd.service conflicts with chrony and if systemd-timesyncd.service is enabled, chrony will not autostart
+- ```for op in stop disable mask; do systemctl $op systemd-timesyncd.service ; done```
 
 ### Setup chrony
 - copy ```etc/chrony/chrony.conf``` to ```etc/chrony/```
-- Disable systemd-timesyncd.service - **conflicts with chrony autostart !**
-    - ```for op in stop disable mask; do systemctl $op systemd-timesyncd.service ; done```
 
 ## Testing
 ### Testing PPS capabilities
@@ -313,8 +320,8 @@ server gpstime.la-archdiocese.net
 
 
 # Allow other NTP clients in our zone to query time
-allow 10.3/16
-allow 10.30.0/24
+# allow 10.3/16
+# allow 10.30.0/24
 
 # (CHANGED): chronyd version 3.2 commandkey directive is no longer supported
 # This directive sets the key ID used for authenticating user commands via the
