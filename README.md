@@ -1,27 +1,7 @@
-# NTP time with GPSD and PPS-enabled GPS device
+# NTP time with GPSD and PPS-enabled GPS GlobalSat MR-350P-S4
 ## Operating environment
 - Ubuntu Bionic 18.04.3
 - Linux kernel 5.4.3 (Vanilla kernel from kernel.org - no patches requried or used)
-## Package installation
-```apt install gpsd chrony setserial gpsd-clients pps-tools```
-## Package versions
-
-Package | Version
-------- | -------
-gpsd | 3.17-5
-setserial | 2.17-50
-pps-tools | 1.0.2-1
-chrony | 3.2-4ubuntu4.2
-gpsd-clients | 3.17-5
-
-## Assumptions
-This guide assumes GPS device is connected on SECOND serial port - ```ttyS1```
-If this is not the case substitute ```/dev/ttyABC``` for ```/dev/ttyS1``` in following files
-- var/lib/setserial/autoserial.conf
-- etc/default/gpsd
-
-**Do this before proceeding further**
-
 ## GlobalSat MR-350PS4 PS/2 pin-out
 ![Image of PS/2 Plug](https://freeshell.de/~luis/model-m/jszybowski/PS2connector.jpg)
 
@@ -62,6 +42,26 @@ MR-350P-S4 PS/2 PIN | Function | DB9 PIN | USB cable wire
 Notes:
 - PS/2 Pin 2 (VCC) goes ONLY to USB cable
 - PS/2 Pin 1 (GND) goes to DB9 Pin 5 **AND** to USB cable
+
+## Package installation
+```apt install gpsd chrony setserial gpsd-clients pps-tools```
+## Package versions
+
+Package | Version
+------- | -------
+gpsd | 3.17-5
+setserial | 2.17-50
+pps-tools | 1.0.2-1
+chrony | 3.2-4ubuntu4.2
+gpsd-clients | 3.17-5
+
+## Assumptions
+This guide assumes GPS device is connected on SECOND serial port - ```ttyS1```
+If this is not the case substitute ```/dev/ttyABC``` for ```/dev/ttyS1``` in following files
+- var/lib/setserial/autoserial.conf
+- etc/default/gpsd
+
+**Do this before proceeding further**
 
 ## Configure serial port
 - Make sure you have modified ```var/lib/setserial/autoserial.conf``` to reflect serial port being used (if modification is required)
