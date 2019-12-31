@@ -59,6 +59,9 @@ MR-350P-S4 PS/2 PIN | Function | DB9 PIN | USB cable wire
 5 | TX | 3 | -
 6 | NC | - | -
 
+Notes:
+- PS/2 Pin 2 (VCC) goes ONLY to USB cable
+- PS/2 Pin 1 (GND) goes to DB9 Pin 5 **AND** to USB cable
 
 ## Configure serial port
 - Make sure you have modified ```var/lib/setserial/autoserial.conf``` to reflect serial port being used (if modification is required)
