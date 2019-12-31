@@ -163,7 +163,17 @@ pps0: name=serial1 path=/dev/ttyS1
 ```
 
 ### Testing PPS capabilities
-```ppswatch /dev/pps0```
+**```sudo ppswatch /dev/pps0```**
+```
+trying PPS source "/dev/pps0"
+found PPS source "/dev/pps0"
+timestamp: 1577777203, sequence: 83886, offset:   1984
+timestamp: 1577777204, sequence: 83887, offset: -31306
+timestamp: 1577777205, sequence: 83888, offset:   5836
+timestamp: 1577777206, sequence: 83889, offset:   3027
+timestamp: 1577777207, sequence: 83890, offset: -24220
+timestamp: 1577777208, sequence: 83891, offset:   2041
+```
 
 ### Testing PPS with ntpshmmon
 **```ntpshmmon -n 5```**
