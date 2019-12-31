@@ -74,7 +74,7 @@ If this is not the case substitute ```/dev/ttyABC``` for ```/dev/ttyS1``` in fol
 - Make sure you have modified ```etc/default/gpsd``` to reflect serial port being used (if modification is required)
 - Copy ```etc/default/gpsd``` to ```c/default/gpsd```
 
-## Enable loading of pps_ldisc module on boot
+## Enable kernel PPS
 ### Check kernel config
 ```grep '^CONFIG_PPS' /boot/config-$(uname -r)```
 Output should contain:
