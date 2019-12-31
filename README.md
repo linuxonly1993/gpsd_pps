@@ -160,7 +160,9 @@ Leap status     : Normal
 ```
 
 ## Links
+1. [GPSD Time Service HOWTO by author of GPSD](https://gpsd.gitlab.io/gpsd/gpsd-time-service-howto.html)
 1.  [GPSD Compatible Hardware](https://gpsd.gitlab.io/gpsd/hardware.html)
+1. [Troubleshooting by author of GPSD](https://gpsd.gitlab.io/gpsd/troubleshooting.html)
 1.  [chrony with GPS for Time Synchronization](http://robotsforroboticists.com/chrony-gps-for-time-synchronization/)
 1. [Not quite 5 minute guide to making an NTP Server](https://ava.upuaut.net/?p=726&cpage=2)
 1. [Chrony and GPSD (Archlinux)](https://wiki.alpinelinux.org/wiki/Chrony_and_GPSD)
