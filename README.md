@@ -112,7 +112,7 @@ If this is not the case substitute ```/dev/ttyABC``` for ```/dev/ttyS1``` in fol
 
 ## Configure GPSD
 - Make sure you have modified ```etc/default/gpsd``` to reflect serial port being used (if modification is required)
-- Copy ```etc/default/gpsd``` to ```c/default/gpsd```
+- Copy ```etc/default/gpsd``` to ```/etc/default/gpsd```
 
 ## Enable kernel PPS
 ### Check kernel config
