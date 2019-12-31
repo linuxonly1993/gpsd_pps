@@ -106,7 +106,7 @@ gpsd-clients | 3.17-5
 This guide assumes GPS device is connected on SECOND serial port - ```ttyS1```
 If this is not the case substitute ```/dev/ttyABC``` for ```/dev/ttyS1``` in following files
 - ```var/lib/setserial/autoserial.conf```
-- ```etc/default/gpsd````
+- ```etc/default/gpsd```
 
 **Do this before proceeding further**
 
