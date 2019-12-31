@@ -100,6 +100,64 @@ CONFIG_PPS_CLIENT_LDISC=m
 ```
 chronyc -m 'sources -v' tracking 'sourcestats -v'
 ```
+PPS details highlighted in **BOLD**
+### Sample chrony output
+**```chronyc -m 'sources -v' tracking 'sourcestats -v'```**
+```
+210 Number of sources = 7
+
+  .-- Source mode  '^' = server, '=' = peer, '#' = local clock.
+ / .- Source state '*' = current synced, '+' = combined , '-' = not combined,
+| /   '?' = unreachable, 'x' = time may be in error, '~' = time too variable.
+||                                                 .- xxxx [ yyyy ] +/- zzzz
+||      Reachability register (octal) -.           |  xxxx = adjusted offset,
+||      Log2(Polling interval) --.      |          |  yyyy = measured offset,
+||                                \     |          |  zzzz = estimated error.
+||                                 |    |           \
+MS Name/IP address         Stratum Poll Reach LastRx Last sample               
+===============================================================================
+#* PPS                           0   4   377    18  +1318ns[+2225ns] +/-  502us
+^- 162.159.200.1                 3  10   377    56  +8603us[+8606us] +/-   46ms
+^- time4.google.com              1  10   377   983  +1242us[+1189us] +/-   24ms
+^- time-a-b.nist.gov             1  10   377   128  -2043us[-2039us] +/-   22ms
+^- gpstime.la-archdiocese.n>     2  10   377   32m   +848us[ +667us] +/-   41ms
+^- clock.fmt.he.net              1  10   377   209  -1836us[-1831us] +/- 4597us
+^- clock.sjc.he.net              1  10   377    39   -507us[ -507us] +/- 3927us
+
+210 Number of sources = 7
+                             .- Number of sample points in measurement set.
+                            /    .- Number of residual runs with same sign.
+                           |    /    .- Length of measurement set (time).
+                           |   |    /      .- Est. clock freq error (ppm).
+                           |   |   |      /           .- Est. error in freq.
+                           |   |   |     |           /         .- Est. offset.
+                           |   |   |     |          |          |   On the -.
+                           |   |   |     |          |          |   samples. \
+                           |   |   |     |          |          |             |
+Name/IP Address            NP  NR  Span  Frequency  Freq Skew  Offset  Std Dev
+==============================================================================
+PPS                        13   8   194     +0.001      0.062    +13ns  2834ns
+162.159.200.1              10   8  155m     -0.431      0.820  +6442us  1354us
+time4.google.com           14   7  223m     -0.400      0.509  -1817us  1802us
+time-a-b.nist.gov          34  14  568m     -0.328      0.070  -1429us  1134us
+gpstime.la-archdiocese.n>  20  12  327m     -0.342      0.123   -691us   799us
+clock.fmt.he.net           17  10  276m     -0.429      0.198   -507us  1020us
+clock.sjc.he.net           13   5  224m     -0.407      0.115   -933us   419us
+
+Reference ID    : 50505300 (PPS)
+Stratum         : 1
+Ref time (UTC)  : Tue Dec 31 01:59:17 2019
+System time     : 0.000000606 seconds fast of NTP time
+Last offset     : +0.000000953 seconds
+RMS offset      : 0.000001683 seconds
+Frequency       : 25.250 ppm slow
+Residual freq   : +0.001 ppm
+Skew            : 0.068 ppm
+Root delay      : 0.001000000 seconds
+Root dispersion : 0.000021925 seconds
+Update interval : 16.0 seconds
+Leap status     : Normal
+```
 
 ## Contents of files
 ### File list
