@@ -34,6 +34,17 @@ Pin | Function
 5 | TX
 6 | NC
 
+## DB9 RS232 serial port pin-out
+![Image of DB9 RS232 plug](https://www.zytrax.com/images/rs232_db9.gif)
+
+Pin | Function | Direction
+--- | -------- | ---------
+1 | DCD | Into computer from GPS
+2 | RX | Into computer from GPS
+3 | TX | To GPS from computer
+4 | DTR | To GPS from computer (unused here)
+5 | GND | -
+
 
 ## Configure serial port
 - Make sure you have modified ```var/lib/setserial/autoserial.conf``` to reflect serial port being used (if modification is required)
