@@ -154,7 +154,7 @@ CONFIG_PPS_CLIENT_LDISC=m
 
 ### Run gpsd in foreground for testing
 - [Stop gpsd](README.md#stop-gpsd-systemd-variant)
-- ```gpsd -b -n -N -D3 /dev/ttyS1 /dev/pps0``` (**IMPORTANT**: replace ``/dev/ttyS1``` with path to serial port you are using)
+- ```gpsd -b -n -N -D3 /dev/ttyS1 /dev/pps0``` (**IMPORTANT**: replace ```/dev/ttyS1``` with path to serial port you are using)
 
 ### Testing PPS capabilities
 ```ppswatch /dev/pps0```
