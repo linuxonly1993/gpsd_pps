@@ -1,0 +1,11 @@
+[Unit]
+Description=Modprobe pps_ldisc
+After=setserial.service
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/modprobe pps_core
+ExecStart=/sbin/modprobe pps_ldisc
+
+[Install]
+WantedBy=gpsd.service
