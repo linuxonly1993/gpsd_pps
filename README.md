@@ -367,7 +367,7 @@ For PPS, only the line reading ```refclock SHM 1 offset 0 delay 0.001 refid PPS`
 #   for op in stop disable mask; do systemctl $op systemd-timesyncd.service ; done
 #
 #
-# (20191229) Sundar: For Globalsat MR-350PS4 PPS GPS on SERIAL port
+# For Globalsat MR-350PS4 PPS GPS on SERIAL port
 # From https://wiki.alpinelinux.org/wiki/Chrony_and_GPSD
 # Commenting out NEMA and SOCK -:
 #   - NEMA is too inaccurate and chrony will not use anyway!
