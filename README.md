@@ -1,4 +1,25 @@
 # NTP time with GPSD and PPS-enabled GPS GlobalSat MR-350P-S4
+Table of Contents
+=================
+
+  * [Operating environment](#operating-environment)
+  * [Things you may need to buy](#things-you-may-need-to-buy)
+  * [GlobalSat MR-350PS4 PS/2 pin-out](#globalsat-mr-350ps4-ps2-pin-out)
+  * [DB9 RS232 serial port pin-out](#db9-rs232-serial-port-pin-out)
+  * [DB9 D-SUB RS232 Adapter (Female with Screw) screw pins](#db9-d-sub-rs232-adapter-female-with-screw-screw-pins)
+  * [NTP time with GPSD and PPS-enabled GPS Garmin 18x LVC GPS](#ntp-time-with-gpsd-and-pps-enabled-gps-garmin-18x-lvc-gps)
+  * [Package installation](#package-installation)
+  * [Package versions](#package-versions)
+  * [Assumptions](#assumptions)
+  * [Configure GPSD](#configure-gpsd)
+  * [Enable kernel PPS](#enable-kernel-pps)
+  * [Configure serial port](#configure-serial-port)
+  * [Testing](#testing)
+  * [Links](#links)
+  * [Contents of files](#contents-of-files)
+
+ToC created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+
 ## Operating environment
 - Ubuntu Bionic 18.04.3
 - Linux kernel 5.4.3 (Vanilla kernel from kernel.org - no patches requried or used)
