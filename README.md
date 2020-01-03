@@ -1,4 +1,45 @@
 # NTP time with GPSD and PPS-enabled GPS GlobalSat MR-350P-S4
+Table of Contents
+=================
+
+   * [NTP time with GPSD and PPS-enabled GPS GlobalSat MR-350P-S4](#ntp-time-with-gpsd-and-pps-enabled-gps-globalsat-mr-350p-s4)
+      * [Operating environment](#operating-environment)
+      * [Things you may need to buy](#things-you-may-need-to-buy)
+      * [GlobalSat MR-350PS4 PS/2 pin-out](#globalsat-mr-350ps4-ps2-pin-out)
+      * [DB9 RS232 serial port pin-out](#db9-rs232-serial-port-pin-out)
+      * [DB9 D-SUB RS232 Adapter (Female with Screw) screw pins](#db9-d-sub-rs232-adapter-female-with-screw-screw-pins)
+      * [NTP time with GPSD and PPS-enabled GPS Garmin 18x LVC GPS](#ntp-time-with-gpsd-and-pps-enabled-gps-garmin-18x-lvc-gps)
+         * [Comparison with the GlobalSat MR-250P-S4:](#comparison-with-the-globalsat-mr-250p-s4)
+      * [Package installation](#package-installation)
+      * [Package versions](#package-versions)
+      * [Assumptions](#assumptions)
+      * [Configure GPSD](#configure-gpsd)
+      * [Enable kernel PPS](#enable-kernel-pps)
+         * [Check kernel config](#check-kernel-config)
+         * [Enable loading of pps_ldisc modules on boot](#enable-loading-of-pps_ldisc-modules-on-boot)
+      * [Configure serial port](#configure-serial-port)
+         * [Disable systemd-timesyncd.service](#disable-systemd-timesyncdservice)
+         * [Setup chrony](#setup-chrony)
+      * [Testing](#testing)
+         * [Stop gpsd (systemd variant)](#stop-gpsd-systemd-variant)
+         * [Restart gpsd (systemd variant)](#restart-gpsd-systemd-variant)
+         * [Run gpsd in foreground for testing](#run-gpsd-in-foreground-for-testing)
+         * [Find pps device](#find-pps-device)
+         * [Testing PPS capabilities](#testing-pps-capabilities)
+         * [Testing PPS with ntpshmmon](#testing-pps-with-ntpshmmon)
+         * [Testing GPS NMEA](#testing-gps-nmea)
+         * [Showing chrony status](#showing-chrony-status)
+         * [Sample chrony output](#sample-chrony-output)
+      * [Links](#links)
+      * [Contents of files](#contents-of-files)
+         * [File list](#file-list)
+         * [etc/default/gpsd](#etcdefaultgpsd)
+         * [etc/systemd/system/pps_ldisc.service](#etcsystemdsystempps_ldiscservice)
+         * [var/lib/setserial/autoserial.conf](#varlibsetserialautoserialconf)
+         * [etc/chrony/chrony.conf](#etcchronychronyconf)
+
+ToC created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+
 ## Operating environment
 - Ubuntu Bionic 18.04.3
 - Linux kernel 5.4.3 (Vanilla kernel from kernel.org - no patches requried or used)
